@@ -91,7 +91,6 @@ void question_5(){
         printf("\nParent Process Finished. Child status: %d\n", status);
     }
     
-    fflush(stdout);
     return;
 
     // NOTE waitpid same as wait except can specify the pid and blocking behavior.
@@ -120,8 +119,6 @@ void question_4(){
         printf("\nParent Process Finished. Child status: %d\n", status);
     }
     
-    
-    fflush(stdout);
     return;
 
     // NOTE the child exits with status 0 if no errors. 
@@ -140,8 +137,15 @@ void question_3(){
         execve("/bin/ls", args, NULL);
     }
 
-    fflush(stdout);
+    //PARENT
+    else{
+        int status;
+        waitpid(pid, &status, 0);
+    }
+
     return;
+
+
 
     // NOTE all exec commands replace the current process with a new program.
     //

@@ -26,6 +26,7 @@ int main(){
     printf("User choice: ");
     fgets(buffer, sizeof(buffer), stdin);
     choice = atoi(buffer);
+    fflush(stdout);
 
     // execute user option
     switch (choice)
