@@ -135,6 +135,7 @@ void question_3(){
 
     //CHILD
     if(pid == 0){
+        fflush(stdout);
         char *args[] = {"ls", "-l", NULL};
         execve("/bin/ls", args, NULL);
     }
