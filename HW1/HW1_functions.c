@@ -138,6 +138,8 @@ void question_3(){
         execve("/bin/ls", args, NULL);
     }
 
+    return;
+
     // NOTE all exec commands replace the current process with a new program.
     //
     // execl: accepts a list of args, uses exact path for program
