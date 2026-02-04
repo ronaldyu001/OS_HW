@@ -138,6 +138,7 @@ void question_3(){
         execve("/bin/ls", args, NULL);
     }
 
+    _exit(0);
     return;
 
     // NOTE all exec commands replace the current process with a new program.
