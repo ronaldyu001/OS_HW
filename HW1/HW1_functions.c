@@ -213,16 +213,16 @@ void question_1(){
     
     //CHILD
     if(pid == 0){
-        printf("\nParent or Child: %s\nx value: %d\n\n", process_type, x);
+        printf("\nChild value before write: %d\n\n", x);
         x = 50; //child updates x
-        printf("\nParent or Child: %s\nx value: %d\n\n", process_type, x);
+        printf("\nChild value after write: %d\n\n", x);
     }
 
     //PARENT
     else{ 
-        printf("\nParent or Child: %s\nx value: %d\n\n", process_type, x);
+        printf("\nParent value before write: %d\n\n", x);
         x = 75; //parent updates x
-        printf("\nParent or Child: %s\nx value: %d\n\n", process_type, x);
+        printf("\nParent value after write: %d\n\n", x);
     }
 
     // NOTE that the child prints x as 100 when run. 
